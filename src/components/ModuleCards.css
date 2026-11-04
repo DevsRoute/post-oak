@@ -1,0 +1,225 @@
+.module {
+  display: flex;
+  flex-direction: column;
+}
+.module .card-head {
+  padding: 14px 16px;
+}
+.module-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.module-link:hover {
+  text-decoration: underline;
+}
+.module-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+/* ---- Interactive progress ---- */
+.progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.progress {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--bg);
+  overflow: visible;
+  outline: none;
+  cursor: pointer;
+}
+.progress-fill,
+.progress-pend {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    left 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.progress-fill {
+  left: 0;
+  background: var(--accent);
+}
+.progress-pend {
+  background: var(--accent);
+  opacity: 0.4;
+}
+.progress:hover .progress-fill {
+  filter: brightness(1.06);
+}
+.progress:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+.progress-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-pop);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+.progress-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--surface);
+}
+.tt-row {
+  display: grid;
+  grid-template-columns: 10px auto 1fr;
+  gap: 8px;
+  align-items: center;
+}
+.tt-row .tnum {
+  text-align: right;
+  font-weight: 600;
+}
+
+.progress-legend {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.progress-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.avail-inline {
+  margin-left: auto;
+  color: var(--fg);
+}
+.avail-inline .tnum {
+  font-weight: 600;
+  margin-right: 4px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-bal {
+  background: var(--accent);
+}
+.dot-pend {
+  background: var(--accent);
+  opacity: 0.4;
+}
+.dot-avail {
+  background: var(--border-strong);
+}
+
+.muted {
+  color: var(--fg-muted);
+}
+.module-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.autopay {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+.autopay-date {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.statline {
+  display: flex;
+  gap: 8px;
+}
+.stat-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.stat-cell .muted {
+  font-size: 11.5px;
+}
+.stat-num.warn {
+  color: var(--warning);
+}
+.stat-num.neg-txt {
+  color: var(--negative);
+}
+
+.inbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 11px 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  text-align: left;
+  width: 100%;
+}
+.inbox-row:hover {
+  border-color: var(--border-strong);
+}
+.view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--accent);
+  font-weight: 500;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.view-link:hover {
+  text-decoration: underline;
+}

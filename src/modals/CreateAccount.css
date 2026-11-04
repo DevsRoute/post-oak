@@ -1,0 +1,132 @@
+.ca-subtitle {
+  margin: -4px 0 18px;
+  color: var(--fg-muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.ca-section-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--fg);
+  margin-bottom: 8px;
+}
+.ca-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.ca-type-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  color: var(--fg);
+  font-size: 14px;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.ca-type-card:hover {
+  border-color: var(--border-strong);
+}
+.ca-type-card.is-selected {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+}
+.ca-radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-strong);
+  background: transparent;
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  transition: border-color 0.12s ease;
+}
+.ca-radio.is-selected {
+  border-color: var(--accent);
+}
+.ca-radio.is-selected::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.ca-type-label {
+  font-weight: 500;
+}
+.ca-apply {
+  margin: 0 0 18px;
+  color: var(--fg-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.ca-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ca-link:hover {
+  text-decoration: underline;
+}
+
+.ca-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.ca-field-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--fg);
+}
+.ca-field-hint {
+  font-size: 11.5px;
+  color: var(--fg-faint);
+}
+.ca-input {
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--fg);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 13.5px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+.ca-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.ca-foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 4px -20px -20px;
+  padding: 14px 20px 18px;
+  border-top: 1px solid var(--border);
+}
+.ca-submit {
+  border-radius: 999px;
+  padding: 7px 18px;
+}
+.ca-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: none;
+}

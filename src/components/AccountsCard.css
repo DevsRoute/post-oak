@@ -1,0 +1,212 @@
+.accounts-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* chip-styled icon buttons (+, ⋮) in the header */
+.chip-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--fg-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.chip-btn:hover {
+  background: var(--hover);
+  color: var(--fg);
+}
+
+.menu-anchor {
+  position: relative;
+  display: inline-flex;
+}
+.acct-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  min-width: 190px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-pop);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  z-index: 40;
+  animation: am-in 0.14s ease-out;
+}
+@keyframes am-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.acct-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border: none;
+  background: transparent;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: var(--radius-sm);
+}
+.acct-menu-item svg {
+  color: var(--fg-muted);
+  flex-shrink: 0;
+}
+.acct-menu-item:hover {
+  background: var(--hover);
+}
+.acct-menu-item:hover svg {
+  color: var(--fg);
+}
+
+/* account rows */
+.account-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0 2px;
+  flex: 1;
+}
+.account-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  padding: 9px 18px;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  margin: 0 6px;
+  width: calc(100% - 12px);
+}
+.account-row:hover {
+  background: var(--hover);
+}
+.account-mark {
+  color: var(--fg-muted);
+  display: inline-flex;
+  flex-shrink: 0;
+}
+.account-row:hover .account-mark {
+  color: var(--fg);
+}
+.account-name {
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.account-balance {
+  color: var(--fg);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* hover popover: pending in/out + available */
+.acct-row-tip {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% - 4px);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-pop);
+  padding: 10px 12px;
+  font-size: 12.5px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  z-index: 25;
+  transform: translateY(4px);
+}
+.acct-row-tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 24px;
+  border: 6px solid transparent;
+  border-top-color: var(--surface-2);
+}
+.account-row:hover .acct-row-tip,
+.account-row:focus-visible .acct-row-tip {
+  opacity: 1;
+  transform: translateY(0);
+}
+.art-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: baseline;
+}
+.art-row > span:first-child {
+  color: var(--fg-muted);
+}
+.art-row .tnum {
+  font-weight: 600;
+  color: var(--fg);
+}
+.art-sep {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+  display: block;
+}
+
+/* footer */
+.accounts-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border: none;
+  background: transparent;
+  color: var(--fg-muted);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.accounts-footer:hover {
+  background: var(--hover);
+  color: var(--fg);
+}
+.accounts-extra-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--fg-muted);
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}

@@ -1,0 +1,247 @@
+.mm-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* top row: title + month nav */
+.mm-wrap-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 4px;
+}
+.mm-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.mm-month-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.mm-nav-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: var(--fg-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.mm-nav-btn:hover:not(:disabled) {
+  background: var(--hover);
+  color: var(--fg);
+}
+.mm-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.mm-month-label {
+  font-size: 13px;
+  color: var(--fg);
+  min-width: 68px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* grid of two cards */
+.mm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 780px) {
+  .mm-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .mm-card {
+    padding: 16px 14px 14px;
+  }
+  .mm-total {
+    font-size: 20px;
+  }
+  .mini-bars {
+    min-width: 100px;
+    height: 36px;
+  }
+}
+
+/* individual card */
+.mm-card {
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.mm-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.mm-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--fg-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+.mm-info {
+  color: var(--fg-faint);
+  line-height: 0;
+}
+.mm-info:hover {
+  color: var(--fg-muted);
+}
+.mm-total {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.mm-total.pos {
+  color: var(--positive);
+}
+
+.mm-rule {
+  height: 1px;
+  background: var(--border);
+  margin: 14px 0;
+}
+.mm-sub {
+  font-size: 12px;
+  color: var(--fg-muted);
+  margin-bottom: 6px;
+}
+
+.mm-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mm-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  font-size: 13.5px;
+}
+.mm-mono {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--fg) 10%, transparent);
+  color: var(--fg-muted);
+  font-size: 10.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mm-mono-brand {
+  background: #ffffff;
+  padding: 0;
+}
+.mm-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--fg);
+}
+.mm-amt {
+  font-weight: 500;
+}
+
+.mm-viewall {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 10px 0 2px;
+  color: var(--fg);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+.mm-viewall:hover {
+  text-decoration: underline;
+}
+.mm-viewall-ico {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--fg) 10%, transparent);
+  color: var(--fg-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mm-foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+.mm-avg-label {
+  font-size: 12px;
+  color: var(--fg-muted);
+  margin-bottom: 2px;
+}
+.mm-avg-value {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* mini bar chart — proportional heights with bottom-light → top-dark gradient */
+.mini-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 44px;
+  min-width: 130px;
+}
+.mini-bar-wrap {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  font-family: inherit;
+}
+.mini-bar {
+  display: block;
+  width: 100%;
+  border: none;
+  border-top: 2px solid var(--accent);
+  border-radius: 0;
+  background: linear-gradient(
+    to top,
+    transparent 0%,
+    color-mix(in srgb, var(--accent) 28%, transparent) 100%
+  );
+  transition: filter 0.12s ease;
+}
+.mini-bar-wrap:hover .mini-bar,
+.mini-bar-wrap:focus-visible .mini-bar {
+  filter: brightness(1.2);
+}
