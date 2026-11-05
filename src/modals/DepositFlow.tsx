@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { BRAND, accounts } from "../data";
 import { money } from "../format";
 import type { Account } from "../types";
-import Logo from "../components/Logo";
+import Wordmark from "../components/Wordmark";
 import AccountMark from "../components/icons/AccountMark";
 import { useModal } from "./ModalContext";
 import {
@@ -65,9 +65,7 @@ export default function DepositFlow({ onClose }: Props) {
     <div className="df-overlay" role="dialog" aria-label="Add funds">
       <header className="df-header">
         <div className="df-brand">
-          <Logo size={26} />
-          <span className="df-divider" />
-          <span className="df-brand-name">{BRAND.name} Demo</span>
+          <Wordmark height={30} />
         </div>
         <button
           type="button"

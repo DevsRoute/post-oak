@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { ChangeEvent, DragEvent, ReactNode } from "react";
 import { BRAND, accounts } from "../data";
 import { money } from "../format";
-import Logo from "../components/Logo";
+import Wordmark from "../components/Wordmark";
 import AccountMark from "../components/icons/AccountMark";
 import {
   AlertCircle,
@@ -63,9 +63,7 @@ export default function CheckDepositFlow({ onClose }: Props) {
     <div className="cd-overlay" role="dialog" aria-label="Check deposit">
       <header className="cd-header">
         <div className="cd-brand">
-          <Logo size={26} />
-          <span className="cd-divider" />
-          <span className="cd-brand-name">{BRAND.name} Demo</span>
+          <Wordmark height={30} />
         </div>
         <button
           type="button"

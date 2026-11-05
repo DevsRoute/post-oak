@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ChangeEvent, DragEvent } from "react";
-import { BRAND } from "../data";
-import Logo from "../components/Logo";
+import Wordmark from "../components/Wordmark";
 import {
   ArrowLeft,
   ChevronRight,
@@ -142,8 +141,7 @@ export default function StartFlow({ variant, onClose }: Props) {
       <div className="sf-overlay" role="dialog" aria-label="Recipient match">
         <header className="sf-header sf-header-split">
           <div className="sf-brand">
-            <Logo size={26} />
-            <span className="sf-brand-name">{BRAND.name} Demo</span>
+            <Wordmark height={30} />
           </div>
           <button
             type="button"
@@ -208,8 +206,7 @@ export default function StartFlow({ variant, onClose }: Props) {
     <div className="sf-overlay" role="dialog" aria-label={copy.heading}>
       <header className="sf-header">
         <div className="sf-brand">
-          <Logo size={26} />
-          <span className="sf-brand-name">{BRAND.name} Demo</span>
+          <Wordmark height={30} />
         </div>
         <button
           type="button"
@@ -448,8 +445,7 @@ function CreateRecipientOverlay({
     <div className="sf-overlay" role="dialog" aria-label="Create recipient">
       <header className="sf-header sf-header-split">
         <div className="sf-brand">
-          <Logo size={26} />
-          <span className="sf-brand-name">{BRAND.name} Demo</span>
+          <Wordmark height={30} />
         </div>
         <button
           type="button"

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { BRAND, bookmarks, navItems } from "../data";
+import { bookmarks, navItems } from "../data";
 import { compact } from "../format";
 import { iconMap, Chevron, Close, Grip } from "./icons/Icons";
-import Logo from "./Logo";
+import Wordmark from "./Wordmark";
 import "./Sidebar.css";
 
 const productTabs = ["Banking", "Payroll", "Books"];
@@ -27,11 +27,7 @@ export default function Sidebar({ open, onClose }: Props) {
         <Close width={18} height={18} />
       </button>
       <button className="workspace" type="button">
-        <Logo size={34} />
-        <span className="workspace-meta">
-          <span className="workspace-name">{BRAND.name}</span>
-          <span className="workspace-plan">{BRAND.plan}</span>
-        </span>
+        <Wordmark width={160} />
         <Chevron width={15} height={15} className="workspace-caret" />
       </button>
 

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { BRAND } from "../data";
 import { money } from "../format";
-import Logo from "../components/Logo";
+import Wordmark from "../components/Wordmark";
 import {
   AlertCircle,
   Bill,
@@ -116,9 +116,7 @@ export default function BillPayFlow({ onClose }: Props) {
     <div className="bp-overlay" role="dialog" aria-label="Bill Pay">
       <header className="bp-header">
         <div className="bp-brand">
-          <Logo size={26} />
-          <span className="bp-divider" />
-          <span className="bp-brand-name">{BRAND.name} Demo</span>
+          <Wordmark height={30} />
         </div>
         <button
           type="button"

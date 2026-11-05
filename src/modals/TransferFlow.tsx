@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { ChangeEvent, DragEvent } from "react";
-import { BRAND, accounts } from "../data";
+import { accounts } from "../data";
 import { money } from "../format";
-import Logo from "../components/Logo";
+import Wordmark from "../components/Wordmark";
 import AccountMark from "../components/icons/AccountMark";
 import {
   Chevron,
@@ -72,9 +72,7 @@ export default function TransferFlow({ onClose }: Props) {
     <div className="tf-overlay" role="dialog" aria-label="Transfer funds">
       <header className="tf-header">
         <div className="tf-brand">
-          <Logo size={26} />
-          <span className="tf-divider" />
-          <span className="tf-brand-name">{BRAND.name} Demo</span>
+          <Wordmark height={30} />
         </div>
         <button
           type="button"

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ChangeEvent, DragEvent, KeyboardEvent as RKE, ReactNode } from "react";
 import { BRAND, accounts } from "../data";
 import { money } from "../format";
-import Logo from "../components/Logo";
+import Wordmark from "../components/Wordmark";
 import AccountMark from "../components/icons/AccountMark";
 import {
   ArrowLeft,
@@ -147,9 +147,7 @@ export default function InviteRecipientFlow({ onClose }: Props) {
     <div className="ir-overlay" role="dialog" aria-label="Invite recipient">
       <header className="ir-header">
         <div className="ir-brand">
-          <Logo size={26} />
-          <span className="ir-divider" />
-          <span className="ir-brand-name">{BRAND.name} Demo</span>
+          <Wordmark height={30} />
         </div>
         <button
           type="button"

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ChangeEvent, KeyboardEvent as RKeyboardEvent, ReactNode } from "react";
 import { BRAND, customers as seedCustomers } from "../data";
 import type { Customer } from "../types";
-import Logo from "../components/Logo";
+import Wordmark from "../components/Wordmark";
 import {
   ArrowLeft,
   ArrowSwap,
@@ -61,9 +61,7 @@ export default function RequestFlow({ onClose }: Props) {
     <div className="rq-overlay" role="dialog" aria-label="Request money">
       <header className="rq-header">
         <div className="rq-brand">
-          <Logo size={26} />
-          <span className="rq-divider" />
-          <span className="rq-brand-name">{BRAND.name} Demo</span>
+          <Wordmark height={30} />
         </div>
         <button
           type="button"
