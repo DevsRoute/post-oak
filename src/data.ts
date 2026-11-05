@@ -2,6 +2,7 @@ import type {
   Account,
   Bookmark,
   ChartPoint,
+  Customer,
   MonthlyMovement,
   NavItem,
   Transaction,
@@ -18,11 +19,11 @@ export const BRAND = {
 export const totalBalance = 5_216_471.18;
 
 export const accounts: Account[] = [
-  { id: "credit", name: "Credit Card", balance: 12_505.87, kind: "credit", pendingIn: 0, pendingOut: 3_900, available: 21_249 },
-  { id: "treasury", name: "Treasury", balance: 200_000.0, kind: "treasury", pendingIn: 31_764.1, pendingOut: 0, available: 200_000 },
-  { id: "ops", name: "Ops / Payroll", balance: 2_023_267.12, kind: "depository", pendingIn: 14_240.5, pendingOut: 8_120.75, available: 2_017_347.11 },
-  { id: "ap", name: "AP", balance: 226_767.82, kind: "depository", pendingIn: 0, pendingOut: 11_430, available: 215_337.82 },
-  { id: "ar", name: "AR", balance: 0.0, kind: "depository", pendingIn: 419, pendingOut: 0, available: 0 },
+  { id: "credit", name: "Credit Card", balance: 12_505.87, kind: "credit", pendingIn: 0, pendingOut: 3_900, available: 21_249, sublabel: "Credit ••7742" },
+  { id: "treasury", name: "Treasury", balance: 200_000.0, kind: "treasury", pendingIn: 31_764.1, pendingOut: 0, available: 200_000, sublabel: "Treasury ••5521" },
+  { id: "ops", name: "Ops / Payroll", balance: 2_023_267.12, kind: "depository", pendingIn: 14_240.5, pendingOut: 8_120.75, available: 2_017_347.11, sublabel: "Checking ••1038" },
+  { id: "ap", name: "AP", balance: 226_767.82, kind: "depository", pendingIn: 0, pendingOut: 11_430, available: 215_337.82, sublabel: "Checking ••1794" },
+  { id: "ar", name: "AR", balance: 0.0, kind: "depository", pendingIn: 419, pendingOut: 0, available: 0, sublabel: "Checking ••4296" },
 ];
 export const extraAccountCount = 2;
 
@@ -275,6 +276,19 @@ export const transactions: Transaction[] = [
   { id: "t18", date: "Oct 31", counterparty: "John Jackman — reimbursement", monogram: "JJ", amount: -124.32, account: "Ops / Payroll", method: "Reimbursement", status: "settled", isMine: true },
   { id: "t19", date: "Oct 31", counterparty: "Monarch Books", monogram: "MB", amount: -6_245.72, account: "Ops / Payroll", method: "ACH debit", status: "settled" },
   { id: "t20", date: "Oct 30", counterparty: "Payroll run", monogram: "PR", amount: -48_117.9, account: "Ops / Payroll", method: "Payroll", status: "settled" },
+];
+
+export const customers: Customer[] = [
+  { id: "nebula", name: "Nebula Strategy Group", email: "ap@nebulastrategy.co" },
+  { id: "orbital", name: "Orbital Advisory Partners", email: "invoices@orbitaladvisory.com" },
+  { id: "polaris", name: "Polaris Legal Services", email: "billing@polarislegal.com" },
+  { id: "astral", name: "Astral Creative Co", email: "finance@astralcreative.co" },
+  { id: "zenith", name: "Zenith Capital Firm", email: "accounts@zenithcapital.co" },
+  { id: "quasar", name: "Quasar Design Studio", email: "hello@quasardesign.co" },
+  { id: "solstice", name: "Solstice Marketing Group", email: "ap@solsticemarketing.com" },
+  { id: "meridian", name: "Meridian Consulting", email: "invoices@meridianconsulting.co" },
+  { id: "aphelion", name: "Aphelion Financial Advisors", email: "billing@aphelionfa.com" },
+  { id: "vega", name: "Vega Compliance Partners", email: "ap@vegacompliance.com" },
 ];
 
 export const txnTabs = [

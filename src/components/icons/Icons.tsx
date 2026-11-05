@@ -188,6 +188,92 @@ export const Close = (p: P) => (
     <path d="M6 6l12 12M18 6 6 18" />
   </svg>
 );
+export const Refresh = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M4 12a8 8 0 0 1 14-5.3L20 9" />
+    <path d="M20 4v5h-5" />
+    <path d="M20 12a8 8 0 0 1-14 5.3L4 15" />
+    <path d="M4 20v-5h5" />
+  </svg>
+);
+export const FileUpload = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M7 3h7l4 4v14H7z" />
+    <path d="M14 3v4h4" />
+    <path d="M12 17v-5m0 0-2 2m2-2 2 2" />
+  </svg>
+);
+export const Copy = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="9" y="9" width="12" height="12" rx="2" />
+    <path d="M5 15V5a2 2 0 0 1 2-2h10" />
+  </svg>
+);
+export const WireIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="m4 7 10-3 6 5v12l-10 3L4 19z" />
+    <path d="M14 4v16" />
+  </svg>
+);
+export const BankIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M3 10 12 4l9 6" />
+    <path d="M5 10v10h14V10" />
+    <path d="M9 20v-6M12 20v-6M15 20v-6M3 20h18" />
+  </svg>
+);
+export const CheckIcon = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="3" y="7" width="18" height="10" rx="2" />
+    <path d="M6 11h5M6 14h8" />
+    <circle cx="17" cy="12" r="1.5" />
+  </svg>
+);
+export const InvoiceIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M6 3h9l3 3v15l-2.2-1.3L13.6 21l-2.3-1.3L9 21l-2.3-1.3L4.5 21V5a2 2 0 0 1 1.5-2Z" />
+    <path d="M8 8h7M8 11.5h7M8 15h4" />
+  </svg>
+);
+export const SafeIcon = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="3" y="4" width="18" height="16" rx="2" />
+    <circle cx="14" cy="12" r="3.5" />
+    <path d="M14 7V5M7 12h3" />
+  </svg>
+);
+export const DownloadPdf = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+    <path d="M14 3v5h5" />
+    <path d="M12 17v-5m0 5-2-2m2 2 2-2" />
+  </svg>
+);
+export const AlertCircle = (p: P) => (
+  <svg {...base(p)}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M12 8v5M12 16h.01" />
+  </svg>
+);
+export const Bookmark = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M6 3h12v18l-6-4-6 4z" />
+  </svg>
+);
+export const Trash = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M4 7h16" />
+    <path d="M9 7V4h6v3" />
+    <path d="M6 7l1 13h10l1-13" />
+    <path d="M10 11v5M14 11v5" />
+  </svg>
+);
+export const FileAttach = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M7 3h7l4 4v14H7z" />
+    <path d="M14 3v4h4" />
+  </svg>
+);
 export const Chevron = (p: P) => (
   <svg {...base(p)}>
     <path d="m6 9 6 6 6-6" />

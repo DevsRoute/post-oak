@@ -6,6 +6,8 @@ export interface Account {
   pendingIn: number;
   pendingOut: number;
   available: number;
+  /* Short second line shown in the account picker, e.g. "Checking ••1038". */
+  sublabel?: string;
 }
 
 export interface NavChild {
@@ -62,4 +64,10 @@ export interface MonthlyMovement {
   outAvg3mo: number;
   inSources: PartyStat[];
   outSources: PartyStat[];
+}
+
+export interface Customer {
+  id: string;
+  name: string;
+  email: string;
 }

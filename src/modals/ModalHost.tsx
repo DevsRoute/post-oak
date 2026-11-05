@@ -1,12 +1,16 @@
 import { useModal } from "./ModalContext";
 import MoveMoney from "./MoveMoney";
-import MoneyForm from "./MoneyForm";
 import CreateAccount from "./CreateAccount";
 import CreateCard from "./CreateCard";
 import CreateInvoice from "./CreateInvoice";
 import CommandPalette from "./CommandPalette";
-import Modal from "../components/Modal";
-import { Field, TextInput } from "../components/ui";
+import BillPayFlow from "./BillPayFlow";
+import CheckDepositFlow from "./CheckDepositFlow";
+import DepositFlow from "./DepositFlow";
+import InviteRecipientFlow from "./InviteRecipientFlow";
+import RequestFlow from "./RequestFlow";
+import StartFlow from "./StartFlow";
+import TransferFlow from "./TransferFlow";
 
 export default function ModalHost() {
   const { name, close } = useModal();
@@ -16,13 +20,19 @@ export default function ModalHost() {
     case "move-money":
       return <MoveMoney onClose={close} />;
     case "send":
-      return <MoneyForm variant="send" onClose={close} />;
+      return <StartFlow variant="send" onClose={close} />;
     case "transfer":
-      return <MoneyForm variant="transfer" onClose={close} />;
+      return <TransferFlow onClose={close} />;
     case "deposit":
-      return <MoneyForm variant="deposit" onClose={close} />;
+      return <DepositFlow onClose={close} />;
+    case "check-deposit":
+      return <CheckDepositFlow onClose={close} />;
     case "request":
-      return <MoneyForm variant="request" onClose={close} />;
+      return <RequestFlow onClose={close} />;
+    case "upload-bill":
+      return <BillPayFlow onClose={close} />;
+    case "invite-recipient":
+      return <InviteRecipientFlow onClose={close} />;
     case "create-account":
       return <CreateAccount onClose={close} />;
     case "create-card":
@@ -31,21 +41,6 @@ export default function ModalHost() {
       return <CreateInvoice onClose={close} />;
     case "command":
       return <CommandPalette onClose={close} />;
-    case "upload-bill":
-      return (
-        <Modal title="Upload bill" onClose={close} width={440}>
-          <Field label="Bill document" hint="PDF or image. In this demo nothing is uploaded.">
-            <TextInput id="ub-file" type="file" />
-          </Field>
-          <Field label="Recipient">
-            <TextInput id="ub-recipient" placeholder="Vendor name" />
-          </Field>
-          <div className="modal-foot" style={{ margin: "8px -20px -20px", paddingBottom: 18 }}>
-            <button className="btn" type="button" onClick={close}>Cancel</button>
-            <button className="btn btn-accent" type="button" onClick={close}>Add bill</button>
-          </div>
-        </Modal>
-      );
     default:
       return null;
   }

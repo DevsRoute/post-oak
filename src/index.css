@@ -5,16 +5,16 @@
    ============================================================ */
 
 :root {
-  /* Color — light theme (warm-neutral surfaces, deep emerald accent) */
-  --bg: #f4f5f3;
+  /* Color — light theme (crisp white surfaces, deep emerald accent) */
+  --bg: #ffffff;
   --surface: #ffffff;
-  --surface-2: #fafbf9;
-  --sidebar: #f8f9f6;
+  --surface-2: #f6f7f4;
+  --sidebar: #fafbf8;
   --fg: #1a1d1a;
   --fg-muted: #6a7066;
   --fg-faint: #969b91;
-  --border: #e5e8e2;
-  --border-strong: #d5d9d0;
+  --border: #ebede7;
+  --border-strong: #d8dcd3;
   --accent: #1f7a5c;
   --accent-soft: #e4f0ea;
   --accent-fg: #ffffff;
@@ -22,9 +22,9 @@
   --negative: #c0472f;
   --warning: #b7791f;
   --chip-bg: #eef0eb;
-  --hover: #eef0ec;
+  --hover: #f1f3ef;
   --shadow: 0 1px 2px rgba(20, 30, 20, 0.04), 0 1px 3px rgba(20, 30, 20, 0.06);
-  --shadow-pop: 0 8px 28px rgba(20, 30, 20, 0.12);
+  --shadow-pop: 0 10px 32px rgba(20, 30, 20, 0.12);
 
   /* Type */
   --font-display: "Spline Sans", "Inter", system-ui, sans-serif;
